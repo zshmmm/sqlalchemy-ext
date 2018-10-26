@@ -17,7 +17,7 @@ from sqlalchemy import Column, String
 from sqlalchemy.dialects.mysql import INTEGER
 
 class GroupInfo(Base, TableModelExt):
-    __tablename__ = 'group_info'
+    \__tablename__ = 'group_info'
 
     id = Column(INTEGER(11), primary_key=True)
     company = Column(String(32), nullable=False)
