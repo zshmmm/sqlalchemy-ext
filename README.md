@@ -8,14 +8,22 @@ delete
 cls.query
 而无需管理 db 连接 session，在每次处理完成后会自动 close session
 
+mysql 连接相关配置在sqlalchemy-ext-query.py中配置
+
 注意: 没有任何异常处理
 
 使用方式
 
 ```python
-from sqlalchemy-ext-query import TableModelExt
+
 from sqlalchemy import Column, String
 from sqlalchemy.dialects.mysql import INTEGER
+from sqlalchemy.ext.declarative import declarative_base
+
+from sqlalchemy-ext-query import TableModelExt
+
+Base = declarative_base()
+metadata = Base.metadata
 
 
 class GroupInfo(Base, TableModelExt):
