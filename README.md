@@ -12,11 +12,12 @@ cls.query
 
 使用方式
 
+```python
 from sqlalchemy-ext-query import TableModelExt
 from sqlalchemy import Column, String
 from sqlalchemy.dialects.mysql import INTEGER
 
-```python
+
 class GroupInfo(Base, TableModelExt):
     __tablename__ = 'group_info'
     
